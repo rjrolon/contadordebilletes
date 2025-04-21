@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalConteoValorElement = document.getElementById('total-conteo-valor');
     const totalConteoCantidadElement = document.getElementById('total-conteo-cantidad');
 
+    document.addEventListener('DOMContentLoaded', () => {
+    const cantidadBilletesInputs = document.querySelectorAll('.cantidad-billetes');
+    const totalConteoValorElement = document.getElementById('total-conteo-valor');
+    const totalConteoCantidadElement = document.getElementById('total-conteo-cantidad');
+
     function calcularTotal() {
         let totalValor = 0;
         let totalCantidad = 0;
