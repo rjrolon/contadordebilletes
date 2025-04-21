@@ -1,0 +1,9 @@
+/* Estilos personalizados aquí */
+body {
+    font-family: sans-serif;
+}
+
+.input-group-text {
+    width: 80px; /* Ajusta el ancho según necesites */
+    justify-content: center;
+}
