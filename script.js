@@ -1,19 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cantidadBilletesInputs = document.querySelectorAll('.cantidad-billetes');
-    const totalConteoValorElement = document.getElementById('total-conteo-valor');
-    const totalConteoCantidadElement = document.getElementById('total-conteo-cantidad');
+    const totalConteoElement = document.getElementById('total-conteo');
 
     function calcularTotal() {
-        let totalValor = 0;
-        let totalCantidad = 0;
+        let total = 0;
         cantidadBilletesInputs.forEach(input => {
             const cantidad = parseInt(input.value) || 0;
             const denominacion = parseInt(input.dataset.denominacion);
-            totalValor += cantidad * denominacion;
-            totalCantidad += cantidad;
+            total += cantidad * denominacion;
         });
-        totalConteoValorElement.textContent = `$${totalValor.toLocaleString('es-AR')}`;
-        totalConteoCantidadElement.textContent = totalCantidad.toLocaleString('es-AR');
+        totalConteoElement.textContent = `$${total.toLocaleString('es-AR')}`;
     }
 
     cantidadBilletesInputs.forEach(input => {
